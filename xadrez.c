@@ -80,7 +80,7 @@ void moveRainha(int casas, int direcao){
 
 
 
-
+//Recursiva parao movimento do bispo
 void moveBispo(int casas, int direcao1, int direcao2) {
     char vertical[30];
     char horizontal[30];
@@ -113,7 +113,7 @@ void moveBispo(int casas, int direcao1, int direcao2) {
 
 
 
-
+//Recursiva para o movimento do cavalo
 void moveCavalo (int direcao1, int direcao2) {
     char vertical[30];
     char horizontal[30];
@@ -245,22 +245,6 @@ int main() {
     }else{
         printf("Você escolheu uma direção de movimento INVÁLIDA para o CAVALO.\n\n\n");
     }
-
-
-    //Movimento do cavalo
-    while (movimentoCavalo < 3) {
-        for (int movimentoVertical = 0; movimentoVertical < 3; movimentoVertical++) {
-            if (movimentoVertical % 2 == 0 && movimentoVertical != 0) {
-                printf("CAVALO - DIREITA\n\n");
-                movimentoCavalo++;
-                break;                
-            } else {
-                movimentoCavalo++;
-                printf("CAVALO - CIMA\n");
-            }
-        }
-    }
-   
 
     return 0;
 }
